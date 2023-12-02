@@ -44,3 +44,103 @@
 
 // Child changes -> parent will not re-render
 // parent changes -> child also re-renders
+
+// function borrowing methods
+const vasanth = {
+  name: "vasanth",
+  age: 10,
+};
+
+const virat = {
+  name: "virat",
+  age: 20,
+};
+
+function display(place, country) {
+  console.log(
+    `My name is ${this.name} and my age is ${this.age}. I'm from ${place}, ${country}`
+  );
+}
+
+// call
+// display.call(vasanth, "chennai", "India");
+// display.call(virat, "Delhi", "Pakistan");
+
+// // apply
+// display.apply(vasanth, ["chennai", "India"]);
+// display.apply(virat, ["Delhi", "Pakistan"]);
+
+// bind
+// const vasanthFn = display.bind(vasanth, "chennai", "India");
+// vasanthFn();
+// vasanthFn();
+// vasanthFn();
+// vasanthFn();
+// vasanthFn();
+// vasanthFn();
+
+// function demo() {
+//   console.log(this);
+// }
+
+//
+// const obj = {
+//   name: "dasdasda",
+//   age: 10,
+//   display: function () {
+//     function inner() {
+//       console.log(this);
+//     }
+
+//     inner();
+//   },
+// };
+
+// obj.display();
+
+// (function (module, __dirname, __pathname, require, exports) {
+//   // file code
+//   console.log("vasanth");
+// })(module, __dirname, __pathname, require, exports);
+
+// console.log("completed");
+
+// require();
+// // // IIFE
+
+// function demo() {
+//   console.log("dsadasdas");
+// }
+
+// demo();
+
+// console.log(module);
+// console.log(__dirname);
+// console.log(__filename);
+
+// IIFE -> parent -> this -> {}
+// function -> parent -> this -> global object
+// obj -> parent -> this -> obj
+// Arrow fn always points to the parent's object
+// const obj = {
+//   name: "dasdasda",
+//   age: 10,
+//   display: function () {
+//     const inner = () => {
+//       console.log(this);
+//     };
+//     inner();
+//   },
+// };
+
+// obj.display();
+
+function display() {
+  const fn = () => {
+    console.log(this);
+  };
+
+  fn();
+}
+
+display();
