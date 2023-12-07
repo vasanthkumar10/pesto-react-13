@@ -1,9 +1,11 @@
-// JS + HTMl -> JSX (Javascript SML syntax) -> component
+// JS + HTMl -> JSX (Javascript XML syntax) -> component
 
 // Inorder to convert my class -> react component -> React Component Class
 
 import React, { Component } from "react";
 
+import Counter from "./components/Counter";
+import CounterHooks from "./components/CounterHooks";
 import Welcome from "./components/Welcome";
 
 // With state -> stateful component
@@ -26,11 +28,13 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Pesto - {this.state.name}</h1>
+        {/* <h1>Pesto - {this.state.name}</h1> */}
         {/* <button onClick={this.modifiedName}>change name</button> */}
-        <button onClick={this.changeName}>change name</button>
+        {/* <button onClick={this.changeName}>change name</button>
         <Welcome name="virat" age="10" />
-        <Welcome name="rohit" age="20" />
+        <Welcome name="rohit" age="20" /> */}
+        <Counter />
+        <CounterHooks />
       </div>
     );
   }
