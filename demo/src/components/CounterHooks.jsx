@@ -28,14 +28,16 @@ function CounterHooks() {
     setCount(count - 1);
   };
 
+  const getContent = () => {
+    if (count % 2 !== 0) return <h1>Counter hooks - {count}</h1>;
+    return <h2>Even number. You can't see me</h2>;
+  };
+
   return (
     <>
+      <h2>Count hooks - {count}</h2>
       {/* {count % 2 !== 0 && <h1>Counter hooks - {count}</h1>} */}
-      {count % 2 !== 0 ? (
-        <h1>Counter hooks - {count}</h1>
-      ) : (
-        <h2>Even number. You can't see me</h2>
-      )}
+      {getContent()}
       <button onClick={() => handleIncrement()}>increment</button>
       <button onClick={() => handleIncrement(5)}>increment by 5</button>
       <button onClick={handleDecrement}>decrement</button>

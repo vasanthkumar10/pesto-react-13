@@ -135,12 +135,33 @@ function display(place, country) {
 
 // obj.display();
 
-function display() {
-  const fn = () => {
-    console.log(this);
-  };
+// function display() {
+//   const fn = () => {
+//     console.log(this);
+//   };
 
-  fn();
-}
+//   fn();
+// }
 
-display();
+// display();
+
+// const props = {
+//   name: "vasanth",
+//   age: 20,
+// };
+
+// const a = props;
+// const b = props;
+
+// a.name = "kumar";
+
+// console.log(a);
+// console.log(b);
+
+// const props = 10;
+// let a = props;
+// const b = props;
+
+// a = 20;
+// console.log(a);
+// console.log(b);
