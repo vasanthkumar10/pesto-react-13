@@ -4,11 +4,15 @@
 
 import React, { Component, createContext } from "react";
 
+import Border from "./components/Border";
+import BorderWrapper from "./components/BorderWrapper";
 import ComponentA from "./components/ComponentA";
 import ComponentD from "./components/ComponentD";
 import Counter from "./components/Counter";
 import CounterHooks from "./components/CounterHooks";
+import Parent from "./components/Parent";
 import Post from "./components/Post";
+import { ReducerDemo } from "./components/ReducerDemo";
 import TaskManager from "./components/TaskManager";
 import Welcome from "./components/Welcome";
 
@@ -35,26 +39,42 @@ class App extends Component {
 
   render() {
     return (
-      <AgeContext.Provider value={this.state.age}>
-        <NameContext.Provider
-          value={{ name: this.state.name, age: this.state.age }}
-        >
-          <div>
-            {/* <h1>Pesto - {this.state.name}</h1> */}
-            {/* <button onClick={this.modifiedName}>change name</button> */}
-            {/* <button onClick={this.changeName}>change name</button>
-        <Welcome name="virat" age="10" />
-        <Welcome name="rohit" age="20" /> */}
-            {/* <Counter />
-        <CounterHooks /> */}
-            {/* <TaskManager /> */}
-            {/* <Post /> */}
+      // <AgeContext.Provider value={this.state.age}>
+      //   <NameContext.Provider
+      //     value={{ name: this.state.name, age: this.state.age }}
+      //   >
+      //     <div>
+      //       {/* <h1>Pesto - {this.state.name}</h1> */}
+      //       {/* <button onClick={this.modifiedName}>change name</button> */}
+      //       {/* <button onClick={this.changeName}>change name</button>
+      //   <Welcome name="virat" age="10" />
+      //   <Welcome name="rohit" age="20" /> */}
+      //       {/* <Counter />
+      //   <CounterHooks /> */}
+      //       {/* <TaskManager /> */}
+      //       {/* <Post /> */}
 
-            <ComponentA />
-            <ComponentD />
-          </div>
-        </NameContext.Provider>
-      </AgeContext.Provider>
+      //       <ComponentA />
+      //       <ComponentD />
+      //     </div>
+      //   </NameContext.Provider>
+      // </AgeContext.Provider>
+
+      <div>
+        {/* <BorderWrapper isVisible={true} name="vasi" color="green">
+          <Counter />
+        </BorderWrapper>
+
+        <BorderWrapper>
+          <ComponentA />
+          <ComponentD />
+        </BorderWrapper>
+
+        <BorderWrapper name="vasi"></BorderWrapper>
+        <Border /> */}
+        {/* <Parent /> */}
+        <ReducerDemo />
+      </div>
     );
   }
 }

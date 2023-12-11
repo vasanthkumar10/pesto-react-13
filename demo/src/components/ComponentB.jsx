@@ -5,7 +5,7 @@ function ComponentB() {
   return (
     <div>
       <h2>Component B</h2>
-      <ComponentC />
+      {/* <ComponentC /> */}
     </div>
   );
 }

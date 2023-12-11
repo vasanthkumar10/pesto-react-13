@@ -165,3 +165,22 @@ function display(place, country) {
 // a = 20;
 // console.log(a);
 // console.log(b);
+
+// const nums = [1, 2, 3, 4, 5];
+// const total = nums.reduce((prevValue, currentValue) => {
+//   console.log(prevValue, currentValue);
+//   return undefined;
+// });
+
+// console.log(total);
+
+// function demo() {
+//   console.log("demo fn");
+// }
+
+// // module.exports = demo; // default
+
+// named export -> export fn
+// module.exports = {
+//   demo,
+// };
