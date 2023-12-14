@@ -4,6 +4,7 @@
 
 import React, { Component, createContext } from "react";
 
+import AxiosDemo from "./components/AxiosDemo";
 import Border from "./components/Border";
 import BorderWrapper from "./components/BorderWrapper";
 import ComponentA from "./components/ComponentA";
@@ -13,6 +14,7 @@ import CounterHooks from "./components/CounterHooks";
 import Parent from "./components/Parent";
 import Post from "./components/Post";
 import { ReducerDemo } from "./components/ReducerDemo";
+import { ReducerDemo1 } from "./components/ReducerDemo1";
 import TaskManager from "./components/TaskManager";
 import Welcome from "./components/Welcome";
 
@@ -73,7 +75,9 @@ class App extends Component {
         <BorderWrapper name="vasi"></BorderWrapper>
         <Border /> */}
         {/* <Parent /> */}
-        <ReducerDemo />
+        {/* <ReducerDemo />
+        <ReducerDemo1 /> */}
+        <AxiosDemo />
       </div>
     );
   }

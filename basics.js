@@ -184,3 +184,21 @@ function display(place, country) {
 // module.exports = {
 //   demo,
 // };
+
+function useReducer(reducer, initialState) {
+  let count = initialState;
+
+  function dispatch(action) {
+    reducer(count, action);
+  }
+  return [count, dispatch];
+}
+
+let [count, dispatch] = useReducer(reducer, 0);
+
+console.log(child());
+console.log(child());
+console.log(child());
+console.log(child());
+console.log(child());
+console.log(child());

@@ -1,0 +1,24 @@
+.App {
+  text-align: center;
+  height: 100vh;
+}
+
+.header {
+  margin: 0;
+}
+
+.app-light {
+  background-color: beige;
+}
+
+.app-dark {
+  background-color: black;
+}
+
+.header-light {
+  color: black;
+}
+
+.header-dark {
+  color: red;
+}
