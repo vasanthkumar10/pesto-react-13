@@ -1,0 +1,6 @@
+# react
+# react-router-dom
+# axios
+# material ui
+# material ui icons
+# react-query
