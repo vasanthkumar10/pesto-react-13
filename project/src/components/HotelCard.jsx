@@ -1,10 +1,16 @@
 import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function HotelCard({ hotel }) {
+  const navigate = useNavigate();
+
   return (
-    <Card sx={{ cursor: "pointer" }}>
+    <Card
+      sx={{ cursor: "pointer" }}
+      onClick={() => navigate(`/hotel/${hotel.slug}`)}
+    >
       <CardMedia
         sx={{ height: 300 }}
         alt="hotel-img"

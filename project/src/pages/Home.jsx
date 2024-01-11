@@ -8,27 +8,29 @@ import { useQuery } from "react-query";
 
 function Home() {
   const [hotels, setHotels] = useState([]);
+  const [filteredHotels, setFilteredHotels] = useState([]);
   const [page, setPage] = useState(1);
   const HOTELS_PER_PAGE = 5;
 
   const fetchHotels = async () => {
     const { data } = await getHotels();
     setHotels(data);
+    setFilteredHotels(data);
     return data;
   };
 
   const { isLoading } = useQuery("hotels", fetchHotels);
   const startIndex = (page - 1) * HOTELS_PER_PAGE;
   const endIndex = page * HOTELS_PER_PAGE - 1;
-  const paginatedHotels = hotels.slice(startIndex, endIndex + 1);
-  const totalHotels = hotels.length;
+  const paginatedHotels = filteredHotels.slice(startIndex, endIndex + 1);
+  const totalHotels = filteredHotels.length;
   const totalPages = Math.ceil(totalHotels / HOTELS_PER_PAGE);
 
   return isLoading ? (
     <h1>Loading</h1>
   ) : (
     <>
-      <Navbar />
+      <Navbar hotels={hotels} setFilteredHotels={setFilteredHotels} />
       <Container maxWidth="lg">
         <Grid container spacing={3} marginTop={2}>
           {paginatedHotels.length > 0 &&
